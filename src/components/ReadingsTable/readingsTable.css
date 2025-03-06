@@ -1,0 +1,65 @@
+/* Table Container */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: var(--bg-light);
+  padding: 10px;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header */
+.table thead {
+  background-color: var(--primary);
+  color: rgb(255, 0, 0);
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Table Body */
+.table tbody tr {
+  transition: background 0.3s ease-in-out;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--bg-dark);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Table Cells */
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    font-size: 13px;
+  }
+}

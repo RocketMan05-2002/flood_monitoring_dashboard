@@ -1,0 +1,14 @@
+.theme-toggle {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background-color: var(--secondary-color);
+  }
