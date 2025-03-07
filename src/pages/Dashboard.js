@@ -13,10 +13,12 @@ const Dashboard = () => {
   useEffect(() => {
     if (selectedMeasure) {
       getReadings(selectedMeasure).then((data) => {
-        setReadings(data.map(r => ({
-          Time: new Date(r.dateTime).toLocaleString(),
-          Value: r.value
-        })));
+        setReadings(
+          data.map((r) => ({
+            Time: new Date(r.dateTime).toLocaleString(),
+            Value: r.value,
+          }))
+        );
       });
     }
   }, [selectedMeasure]);
@@ -30,7 +32,10 @@ const Dashboard = () => {
           <StationSelector onSelect={setSelectedStation} />
         </div>
         <div className="col-md-6">
-          <MeasureSelector stationId={selectedStation} onSelect={setSelectedMeasure} />
+          <MeasureSelector
+            stationId={selectedStation}
+            onSelect={setSelectedMeasure}
+          />
         </div>
       </div>
 
@@ -40,7 +45,9 @@ const Dashboard = () => {
           <ReadingsTable data={readings} />
         </>
       ) : (
-        <p className="text-warning mt-4">No readings available for the selected measure.</p>
+        <p className="text-warning mt-4">
+          No readings available for the selected measure.
+        </p>
       )}
     </div>
   );
